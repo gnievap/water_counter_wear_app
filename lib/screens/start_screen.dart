@@ -30,7 +30,6 @@ class _StartScreenState extends State<StartScreen> {
             _logButton(),
           ],
       ),
-      backgroundColor: Colors.black,
     );
   }
 
@@ -68,13 +67,9 @@ class _StartScreenState extends State<StartScreen> {
   Widget _logButton(){
     return Center(
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.indigo, 
-        foregroundColor: Colors.white, 
+        onPressed: () { },
+        child: const Text('Registrar'),
       ),
-      onPressed: () { },
-      child: const Text('Registrar'),
-    ),
     );
   }
   /*        

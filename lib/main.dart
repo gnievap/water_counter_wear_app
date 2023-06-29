@@ -22,7 +22,12 @@ class MyApp extends StatelessWidget {
               headlineSmall: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),   
               bodyMedium: TextStyle(color: Color.fromARGB(255, 137, 186, 243), fontWeight: FontWeight.bold),
             ),
-          //colorSchemeSeed: const Color(0xff6750a4), 
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.indigo, // background (button) color
+            foregroundColor: Colors.white,
+            ),
+          ),
           useMaterial3: true),
       home:  const StartScreen(),
     );
