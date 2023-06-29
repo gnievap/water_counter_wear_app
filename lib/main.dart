@@ -15,7 +15,15 @@ class MyApp extends StatelessWidget {
       title: 'Water Counter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          colorSchemeSeed: const Color(0xff6750a4), useMaterial3: true),
+          scaffoldBackgroundColor: const Color(0x00000000),
+          primaryColor: Colors.indigo,
+          textTheme:
+            const TextTheme(   //0x89baf3
+              headlineSmall: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),   
+              bodyMedium: TextStyle(color: Color.fromARGB(255, 137, 186, 243), fontWeight: FontWeight.bold),
+            ),
+          //colorSchemeSeed: const Color(0xff6750a4), 
+          useMaterial3: true),
       home:  const StartScreen(),
     );
   }

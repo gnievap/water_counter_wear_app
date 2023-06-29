@@ -9,12 +9,7 @@ class StartScreen extends StatefulWidget {
 
 class _StartScreenState extends State<StartScreen> {
 
-  final TextStyle estiloTexto = const TextStyle(
-      decoration: TextDecoration.none,
-      fontSize: 25,
-      color: Colors.white,
-      fontWeight: FontWeight.bold,
-    );
+
     
   @override
   Widget build(BuildContext context) {
@@ -40,12 +35,18 @@ class _StartScreenState extends State<StartScreen> {
   }
 
   Widget _totalMl(){
-    return Center(
-            child: Text(
-              '0 mL',
-              style: estiloTexto,
-              ),
-          );
+    return Column(
+      children: [
+        Text(
+            '0 mL',
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          Text(
+            'Faltan 2550 mL',
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
+      ],
+    );
   }
 
   Widget _indicators(){
@@ -54,11 +55,11 @@ class _StartScreenState extends State<StartScreen> {
             children: [
               Text(
                 '0 %',
-                style: estiloTexto,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
-              Text(
-                '0.0',
-                style: estiloTexto,
+               Text(
+                 '0.0',
+                 style: Theme.of(context).textTheme.headlineSmall,
               ),
             ],
           );    
