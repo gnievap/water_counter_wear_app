@@ -49,13 +49,15 @@ class _StartScreenState extends State<StartScreen> {
   }
 
   Widget _indicators(){
-    return Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                 _percentage(),    
-                 _smallDivider(),          
-                 _hydration(),
-              ],
+    return IntrinsicHeight(
+      child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                   _percentage(),    
+                   _smallDivider(),          
+                   _hydration(),
+                ],
+      ),
     );    
   }
 
@@ -77,11 +79,13 @@ class _StartScreenState extends State<StartScreen> {
             children: [
               const Center(
                 child:  SizedBox(
-                  width: 40,
-                  height: 40,
+                  width: 45,
+                  height: 45,
                   child: CircularProgressIndicator(
                     strokeWidth: 6,
-                    value: 5,
+                    value: 0.3, // entre 0 y 1 3E8BEC 11324A
+                    color: Color.fromARGB(255, 62, 139, 236),
+                    backgroundColor: Color.fromARGB(255, 17, 50, 74),
                   ),
                 ),
               ),
@@ -126,8 +130,8 @@ Widget _hydration(){
 
 Widget _smallDivider(){
   return const VerticalDivider(
-      color: Colors.amber,
-      thickness: 2,
+      color: Color.fromARGB(255, 51, 51, 51),
+      thickness: 1,
       width: 20,
       indent: 10,
       endIndent: 0,
