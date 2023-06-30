@@ -20,13 +20,13 @@ class _StartScreenState extends State<StartScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _totalMl(),
-            const SizedBox(
+            /*const SizedBox(
               height: 20.0,
-            ),
+            ),*/
             _indicators(),
-             const SizedBox(
+            /* const SizedBox(
               height: 20.0,
-            ),
+            ),*/
             _logButton(),
           ],
       ),
@@ -50,18 +50,13 @@ class _StartScreenState extends State<StartScreen> {
 
   Widget _indicators(){
     return Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                '0 %',
-                style: Theme.of(context).textTheme.headlineSmall,
-              ),
-               Text(
-                 '0.0',
-                 style: Theme.of(context).textTheme.headlineSmall,
-              ),
-            ],
-          );    
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                 _percentage(),    
+                 _smallDivider(),          
+                 _hydration(),
+              ],
+    );    
   }
 
   Widget _logButton(){
@@ -72,8 +67,72 @@ class _StartScreenState extends State<StartScreen> {
       ),
     );
   }
-  /*        
-         
-  }*/
+  
+  Widget _percentage(){
+    return Column(
+      children: [
+        SizedBox(
+          height: 60,
+          child: Stack(
+            children: [
+              const Center(
+                child:  SizedBox(
+                  width: 40,
+                  height: 40,
+                  child: CircularProgressIndicator(
+                    strokeWidth: 6,
+                    value: 5,
+                  ),
+                ),
+              ),
+              
+                Positioned(
+                  bottom: 0,
+                  left: 10,
+                  right: 10,
+                  top: 22,
+                  child: Text(
+                    '0%',
+                    style: Theme.of(context).textTheme.bodySmall,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+            
+            ],
+          ),
+        ),
+        Text(
+             'Hoy',
+             style: Theme.of(context).textTheme.bodySmall,
+        ),
+      ],
+    );
+  }
+
+Widget _hydration(){
+  return Column(
+    children: [
+      Text(
+            '0.0',
+            style: Theme.of(context).textTheme.bodySmall,
+      ),
+      Text(
+            'Hidratación',
+            style: Theme.of(context).textTheme.bodySmall,
+      ),
+    ],
+  );
+}
+
+Widget _smallDivider(){
+  return const VerticalDivider(
+      color: Colors.amber,
+      thickness: 2,
+      width: 20,
+      indent: 10,
+      endIndent: 0,
+    );
+}
+
 }
 
