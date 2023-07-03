@@ -20,13 +20,9 @@ class _StartScreenState extends State<StartScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _totalMl(),
-            /*const SizedBox(
-              height: 20.0,
-            ),*/
+          
             _indicators(),
-            /* const SizedBox(
-              height: 20.0,
-            ),*/
+  
             _logButton(),
           ],
       ),
@@ -54,7 +50,13 @@ class _StartScreenState extends State<StartScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                    _percentage(),    
-                   _smallDivider(),          
+                   const SizedBox(
+                    width: 10,
+                   ),
+                   _smallDivider(),
+                   const SizedBox(
+                    width: 10,
+                   ),          
                    _hydration(),
                 ],
       ),
@@ -116,10 +118,7 @@ class _StartScreenState extends State<StartScreen> {
 Widget _hydration(){
   return Column(
     children: [
-      Text(
-            '0.0',
-            style: Theme.of(context).textTheme.bodySmall,
-      ),
+      _intervalBar(),
       Text(
             'Hidratación',
             style: Theme.of(context).textTheme.bodySmall,
@@ -136,6 +135,17 @@ Widget _smallDivider(){
       indent: 10,
       endIndent: 0,
     );
+}
+Widget _intervalBar(){
+  return Row(
+    children: [
+        
+        Text(
+            '0.0',
+            style: Theme.of(context).textTheme.bodySmall,
+        ),
+    ],
+  );
 }
 
 }
