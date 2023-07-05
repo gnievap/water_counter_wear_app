@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../assets/custom_theme.dart';
+
 class StartScreen extends StatefulWidget {
   const StartScreen({super.key});
 
@@ -73,6 +75,8 @@ class _StartScreenState extends State<StartScreen> {
   }
   
   Widget _percentage(){
+  final customColors = Theme.of(context).extension<CustomTheme>()!;
+
     return Column(
       children: [
         SizedBox(
@@ -86,7 +90,8 @@ class _StartScreenState extends State<StartScreen> {
                   child: CircularProgressIndicator(
                     strokeWidth: 6,
                     value: 0.3, // entre 0 y 1 3E8BEC 11324A
-                    color: Color.fromARGB(255, 62, 139, 236),
+                    color: customColors.blueTheme,
+                    //color: Color.fromARGB(255, 62, 139, 236),
                     backgroundColor: Color.fromARGB(255, 17, 50, 74),
                   ),
                 ),

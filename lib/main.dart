@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:water_counter_test/screens/start_screen.dart';
 
+import 'assets/custom_theme.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +19,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           scaffoldBackgroundColor: const Color(0x00000000),
           primaryColor: Colors.indigoAccent,
-          //hintColor: Colors.blue,
+          extensions: <ThemeExtension<dynamic>>[
+          CustomTheme.standardTheme,
+        ],
           textTheme:
             const TextTheme(   //0x89baf3
               headlineSmall: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),   
