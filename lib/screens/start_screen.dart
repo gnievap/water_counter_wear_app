@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../assets/custom_theme.dart';
+import '../assets/interval_progress_bar.dart';
+
+//import '../assets/custom_theme.dart';
 
 class StartScreen extends StatefulWidget {
   const StartScreen({super.key});
@@ -75,7 +77,7 @@ class _StartScreenState extends State<StartScreen> {
   }
   
   Widget _percentage(){
-  final customColors = Theme.of(context).extension<CustomTheme>()!;
+  //final customColors = Theme.of(context).extension<CustomTheme>()!;
 
     return Column(
       children: [
@@ -90,8 +92,7 @@ class _StartScreenState extends State<StartScreen> {
                   child: CircularProgressIndicator(
                     strokeWidth: 6,
                     value: 0.3, // entre 0 y 1 3E8BEC 11324A
-                    color: customColors.blueTheme,
-                    //color: Color.fromARGB(255, 62, 139, 236),
+                    color: Color.fromARGB(255, 62, 139, 236),
                     backgroundColor: Color.fromARGB(255, 17, 50, 74),
                   ),
                 ),
@@ -120,17 +121,7 @@ class _StartScreenState extends State<StartScreen> {
     );
   }
 
-Widget _hydration(){
-  return Column(
-    children: [
-      _intervalBar(),
-      Text(
-            'Hidratación',
-            style: Theme.of(context).textTheme.bodySmall,
-      ),
-    ],
-  );
-}
+
 
 Widget _smallDivider(){
   return const VerticalDivider(
@@ -141,17 +132,32 @@ Widget _smallDivider(){
       endIndent: 0,
     );
 }
-Widget _intervalBar(){
-  return Row(
-    children: [
-        
+
+  Widget _hydration(){
+    return Column(
+      children: [
+        const IntervalProgressBar(),
+        //_intervalBar(),
         Text(
-            '0.0',
-            style: Theme.of(context).textTheme.bodySmall,
+          'Hidratación',
+          style: Theme.of(context).textTheme.bodySmall,
         ),
-    ],
-  );
-}
+      ],
+    );
+  }
+
+
+// Widget _intervalBar(){
+//   return Row(
+//     children: [
+        
+//         Text(
+//             '0.0',
+//             style: Theme.of(context).textTheme.bodySmall,
+//         ),
+//     ],
+//   );
+// }
 
 }
 
