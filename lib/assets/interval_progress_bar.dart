@@ -16,6 +16,9 @@ State<IntervalProgressBar> {
     return Row(
       children: [
         _bar(),
+        const SizedBox(
+          width: 8,
+        ),
         _label(),
       ],
     );
@@ -82,10 +85,18 @@ State<IntervalProgressBar> {
 
 
   Widget _label() {
-    return Text(
-      '1.0',
-      style: Theme.of(context).textTheme.headlineSmall,
-    );
+    return 
+        Column(
+          children: [
+            const SizedBox(
+              height: 30,
+            ),
+            Text(
+              '1.0',
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+          ],
+        );
   }
 
 }

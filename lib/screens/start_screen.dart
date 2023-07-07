@@ -69,9 +69,12 @@ class _StartScreenState extends State<StartScreen> {
 
   Widget _logButton(){
     return Center(
-      child: ElevatedButton(
-        onPressed: () { },
-        child: const Text('Registrar'),
+      child: ConstrainedBox(
+        constraints: const BoxConstraints.tightFor(width: 100, height: 30),
+        child: ElevatedButton(
+          onPressed: () { },
+          child: const Text('Registrar'),
+        ),
       ),
     );
   }
@@ -146,18 +149,6 @@ Widget _smallDivider(){
     );
   }
 
-
-// Widget _intervalBar(){
-//   return Row(
-//     children: [
-        
-//         Text(
-//             '0.0',
-//             style: Theme.of(context).textTheme.bodySmall,
-//         ),
-//     ],
-//   );
-// }
 
 }
 
