@@ -20,8 +20,11 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: const Color(0x00000000),
           primaryColor: Colors.indigoAccent,
           extensions: <ThemeExtension<dynamic>>[
-          CustomTheme.standardTheme,
-        ],
+            CustomTheme.standardTheme,
+          ],
+          appBarTheme: const AppBarTheme(
+            color:  Color(0x00000000),
+          ),
           textTheme:
             const TextTheme(   //0x89baf3
               headlineSmall: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),   

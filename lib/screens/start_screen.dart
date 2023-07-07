@@ -20,6 +20,15 @@ class _StartScreenState extends State<StartScreen> {
     
 
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 10.0,
+        centerTitle: false,
+        leadingWidth: 0,
+        title:  Text(
+          'HI WATER',
+          style: Theme.of(context).textTheme.bodyMedium,
+        ),
+      ),
       body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -70,7 +79,7 @@ class _StartScreenState extends State<StartScreen> {
   Widget _logButton(){
     return Center(
       child: ConstrainedBox(
-        constraints: const BoxConstraints.tightFor(width: 100, height: 30),
+        constraints: const BoxConstraints.tightFor(width: 100, height: 26.5),
         child: ElevatedButton(
           onPressed: () { },
           child: const Text('Registrar'),
