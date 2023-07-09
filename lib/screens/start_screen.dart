@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../assets/circular_indicator.dart';
 import '../assets/interval_progress_bar.dart';
 
 //import '../assets/custom_theme.dart';
@@ -120,38 +121,7 @@ class _StartScreenState extends State<StartScreen> {
 
     return Column(
       children: [
-        SizedBox(
-          height: 60,
-          child: Stack(
-            children: [
-              const Center(
-                child:  SizedBox(
-                  width: 45,
-                  height: 45,
-                  child: CircularProgressIndicator(
-                    strokeWidth: 6,
-                    value: 0.3, // entre 0 y 1 3E8BEC 11324A
-                    color: Color.fromARGB(255, 62, 139, 236),
-                    backgroundColor: Color.fromARGB(255, 17, 50, 74),
-                  ),
-                ),
-              ),
-              
-                Positioned(
-                  bottom: 0,
-                  left: 10,
-                  right: 10,
-                  top: 22,
-                  child: Text(
-                    '0%',
-                    style: Theme.of(context).textTheme.bodySmall,
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-            
-            ],
-          ),
-        ),
+        const CircularIndicator(),
         Text(
              'Hoy',
              style: Theme.of(context).textTheme.bodySmall,
