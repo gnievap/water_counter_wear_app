@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../assets/interval_progress_bar.dart';
 
@@ -21,35 +22,61 @@ class _StartScreenState extends State<StartScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 10.0,
-        centerTitle: false,
-        leadingWidth: 0,
-        title:  Text(
+        toolbarHeight: 16.0,
+        //centerTitle: false,
+        leadingWidth: 100,
+        leading: Text(
           'HI WATER',
           style: Theme.of(context).textTheme.bodyMedium,
         ),
+        actions: [
+          hour(),
+        ],
       ),
-      body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _totalMl(),
-          
-            _indicators(),
-  
-            _logButton(),
-          ],
+      body: SizedBox(
+        height: 160.0,
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _totalMl(),
+              _verticalGap(),
+              _indicators(),
+              _verticalGap(),
+              _logButton(),
+            ],
+        ),
       ),
     );
   }
 
+  Widget _verticalGap(){
+    return const SizedBox(
+      height: 5.5,
+    );
+  }
+
+  Widget hour(){
+    //DateTime now = DateTime.now();
+    String formattedTime = DateFormat.Hm().format(DateTime.now());
+    return Text(
+      formattedTime,
+      style: Theme.of(context).textTheme.bodySmall,
+    );
+    
+  }
+
   Widget _totalMl(){
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        SizedBox(
+          height: 25.0,
+          child: Text(
+              '0 mL',
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+        ),
         Text(
-            '0 mL',
-            style: Theme.of(context).textTheme.headlineSmall,
-          ),
-          Text(
             'Faltan 2550 mL',
             style: Theme.of(context).textTheme.bodyMedium,
           ),
@@ -149,7 +176,6 @@ Widget _smallDivider(){
     return Column(
       children: [
         const IntervalProgressBar(),
-        //_intervalBar(),
         Text(
           'Hidratación',
           style: Theme.of(context).textTheme.bodySmall,
