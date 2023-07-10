@@ -26,6 +26,16 @@ State<IntervalProgressBar> {
 
   Widget _bar(){
     // dark colors
+    // 22, 45, 67
+    // 28, 55, 53
+    // 33, 59, 34
+    // 42, 59, 17
+    // 50, 59, 18
+    // 63, 60, 21
+    // 71, 57, 9
+    // 75, 51, 9
+    // 77, 40, 15
+    // 71, 29, 23
 
 
     // bright colors
@@ -42,25 +52,46 @@ State<IntervalProgressBar> {
 
     return Column(
       children: [
-        _interval(customColor: const Color.fromARGB(255, 66, 144, 255)),
+
+        _interval(customColor: const Color.fromARGB(255, 22, 45, 67)),
         _separator(),
-        _interval(customColor: const Color.fromARGB(255, 94, 173, 167)),
+        _interval(customColor: const Color.fromARGB(255, 28, 55, 53)),
         _separator(),
-        _interval(customColor: const Color.fromARGB(255, 118, 188, 116)),
+        _interval(customColor: const Color.fromARGB(255, 33, 59, 34)),
         _separator(),
-        _interval(customColor: const Color.fromARGB(255, 145, 186, 62)),
+        _interval(customColor: const Color.fromARGB(255, 42, 59, 17)),
         _separator(), 
-        _interval(customColor: const Color.fromARGB(255, 169, 183, 60)),
+        _interval(customColor: const Color.fromARGB(255, 50, 59, 18)),
         _separator(),
-        _interval(customColor: const Color.fromARGB(255, 192, 181, 60)),
+        _interval(customColor: const Color.fromARGB(255, 63, 60, 21)),
         _separator(),
-        _interval(customColor: const Color.fromARGB(255, 230, 190, 64)),
+        _interval(customColor: const Color.fromARGB(255, 71, 57, 9)),
         _separator(),
-        _interval(customColor: const Color.fromARGB(255, 237, 169, 59)),
+        _interval(customColor: const Color.fromARGB(255, 75, 51, 9)),
         _separator(),
-        _interval(customColor: const Color.fromARGB(255, 235, 138, 60)),
+        _interval(customColor: const Color.fromARGB(255, 77, 40, 15)),
         _separator(),
-        _interval(customColor: const Color.fromARGB(255, 229, 95, 72)),
+        _interval(customColor: const Color.fromARGB(255, 71, 29, 23)),
+
+        // _interval(customColor: const Color.fromARGB(255, 66, 144, 255)),
+        // _separator(),
+        // _interval(customColor: const Color.fromARGB(255, 94, 173, 167)),
+        // _separator(),
+        // _interval(customColor: const Color.fromARGB(255, 118, 188, 116)),
+        // _separator(),
+        // _interval(customColor: const Color.fromARGB(255, 145, 186, 62)),
+        // _separator(), 
+        // _interval(customColor: const Color.fromARGB(255, 169, 183, 60)),
+        // _separator(),
+        // _interval(customColor: const Color.fromARGB(255, 192, 181, 60)),
+        // _separator(),
+        // _interval(customColor: const Color.fromARGB(255, 230, 190, 64)),
+        // _separator(),
+        // _interval(customColor: const Color.fromARGB(255, 237, 169, 59)),
+        // _separator(),
+        // _interval(customColor: const Color.fromARGB(255, 235, 138, 60)),
+        // _separator(),
+        // _interval(customColor: const Color.fromARGB(255, 229, 95, 72)),
       ],
     );
   }
