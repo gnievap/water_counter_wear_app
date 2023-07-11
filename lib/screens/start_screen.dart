@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+//import 'package:wear/wear.dart';
+
 import '../assets/circular_indicator.dart';
 import '../assets/interval_progress_bar.dart';
 
@@ -20,7 +22,6 @@ class _StartScreenState extends State<StartScreen> {
   @override
   Widget build(BuildContext context) {
     
-
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 16.0,
@@ -34,19 +35,26 @@ class _StartScreenState extends State<StartScreen> {
           hour(),
         ],
       ),
-      body: SizedBox(
-        height: 160.0,
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _totalMl(),
-              _verticalGap(),
-              _indicators(),
-              _verticalGap(),
-              _logButton(),
-            ],
-        ),
-      ),
+      body: 
+      /*WatchShape(
+        builder: (BuildContext context, WearShape shape, Widget? child) {
+          return */
+          SizedBox(
+            height: 160.0,
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _totalMl(),
+                  _verticalGap(),
+                  _indicators(),
+                  _verticalGap(),
+                  _logButton(),
+                ],
+            ),
+          ),
+         // );
+        //}
+      //),
     );
   }
 
