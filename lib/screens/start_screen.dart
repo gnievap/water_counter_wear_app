@@ -107,7 +107,7 @@ class _StartScreenState extends State<StartScreen> {
   Widget _logButton(){
     return Center(
       child: ConstrainedBox(
-        constraints: const BoxConstraints.tightFor(width: 100, height: 26.5),
+        constraints: const BoxConstraints.tightFor(width: 100, height: 28.0),
         child: ElevatedButton(
           onPressed: () { },
           child: const Text('Registrar'),
@@ -145,7 +145,7 @@ Widget _smallDivider(){
   Widget _hydration(){
     return Column(
       children: [
-        const IntervalProgressBar(),
+        const IntervalProgressBar(value: 1),
         Text(
           'Hidratación',
           style: Theme.of(context).textTheme.bodySmall,
