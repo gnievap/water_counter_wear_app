@@ -8,14 +8,20 @@ class DrinksScreen extends StatelessWidget {
     return Scaffold(
         body: GridView.count(
           crossAxisCount: 2,
-          children: List.generate(6, (index) {
-            return Center(
-              child: Text(
-                'Item $index',
-                style: Theme.of(context).textTheme.headlineSmall,
-              ),
-            );
-          }),
+          children: 
+          [
+            oneCard(context),
+            oneCard(context),
+          ],
+          // List.generate(6, (index) {
+          //   return Center(
+          //     child: Text(
+          //       'Item $index',
+          //       style: Theme.of(context).textTheme.headlineSmall,
+          //     ),
+          //   );
+          // }
+          // ),
         ),
       );
   }
