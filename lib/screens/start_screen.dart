@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:water_counter_test/screens/drinks_screen.dart';
 
 //import 'package:wear/wear.dart';
 
@@ -117,7 +118,12 @@ class _StartScreenState extends State<StartScreen> {
       child: ConstrainedBox(
         constraints: const BoxConstraints.tightFor(width: 100, height: 28.0),
         child: ElevatedButton(
-          onPressed: () { },
+          onPressed: () { 
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const DrinksScreen()),
+            );
+          },
           child: const Text('Registrar'),
         ),
       ),
