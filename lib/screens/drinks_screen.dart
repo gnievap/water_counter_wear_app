@@ -4,6 +4,13 @@ import 'package:intl/intl.dart';
 class DrinksScreen extends StatelessWidget {
   const DrinksScreen({Key? key}) : super(key: key);
 
+  // Colores de las tarjetas:
+  // back: 26, 49, 70, font: 139, 215, 255
+  // back: 67, 47, 19, font: 255, 207, 115
+  // back: 54, 34, 69, font: 230, 164, 255
+  // back: 64, 31, 44, font: 255, 157, 200
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
