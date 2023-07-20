@@ -30,9 +30,14 @@ class DrinksScreen extends StatelessWidget {
         toolbarHeight: 16.0,
         //centerTitle: false,
         leadingWidth: 100,
-        leading: Text(
-          'Cancel',
-          style: Theme.of(context).textTheme.bodySmall,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+           },
+          child: Text(
+            'Cancel',
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
         ),
         actions: [
           hour(context),
