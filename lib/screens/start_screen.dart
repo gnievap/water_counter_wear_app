@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:water_counter_test/screens/drinks_screen.dart';
@@ -17,16 +19,13 @@ class StartScreen extends StatefulWidget {
 }
 
 class _StartScreenState extends State<StartScreen> {
-
-
-    
+   
   @override
   Widget build(BuildContext context) {
     
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 16.0,
-        //centerTitle: false,
         leadingWidth: 100,
         leading: Text(
           'HI WATER',
@@ -66,13 +65,15 @@ class _StartScreenState extends State<StartScreen> {
   }
 
   Widget hour(){
-    //DateTime now = DateTime.now();
-    String formattedTime = DateFormat.Hm().format(DateTime.now());
-    return Text(
-      formattedTime,
-      style: Theme.of(context).textTheme.bodySmall,
-    );
-    
+    return StreamBuilder(
+      stream: Stream.periodic(const Duration(seconds: 1)),
+      builder: (context, snapshot) {
+        return Text(
+          DateFormat.Hm().format(DateTime.now()),
+          style: Theme.of(context).textTheme.bodySmall,
+          );
+      },
+    );    
   }
 
   Widget _totalMl(){

@@ -66,12 +66,15 @@ class DrinksScreen extends StatelessWidget {
   }
 
    Widget hour(BuildContext context){
-    //DateTime now = DateTime.now();
-    String formattedTime = DateFormat.Hm().format(DateTime.now());
-    return Text(
-      formattedTime,
-      style: Theme.of(context).textTheme.bodySmall,
-    );
+    return StreamBuilder(
+      stream: Stream.periodic(const Duration(seconds: 1)),
+      builder: (context, snapshot) {
+        return Text(
+          DateFormat.Hm().format(DateTime.now()),
+          style: Theme.of(context).textTheme.bodySmall,
+          );
+      },
+    ); 
     
   }
 
