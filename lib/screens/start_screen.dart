@@ -121,7 +121,7 @@ class _StartScreenState extends State<StartScreen> {
           onPressed: () { 
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const DrinksScreen()),
+              MaterialPageRoute(builder: (context) =>  DrinksScreen()),
             );
           },
           child: const Text('Registrar'),
