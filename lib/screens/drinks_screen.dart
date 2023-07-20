@@ -83,7 +83,7 @@ class DrinksScreen extends StatelessWidget {
            child: Center(
              child: SizedBox(
                width: 100.0,
-               height: 60.0,
+               //height: 60.0,
                child: 
                 Card(
                   elevation: 10.0,
