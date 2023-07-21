@@ -1,16 +1,12 @@
 # water_counter_test
 
-A new Flutter project.
+This project is a clon of the Hi Water app, an Apple Watch app.
+This clon is created ONLY for educational purposes.
+It's created using the Flutter Framework
+The result is an app developed for Wear-OS.
 
-## Getting Started
+## Packages
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project requires the next packages from pub.dev:
+     flutter_intl version 0.0.1
+     intl version 0.18.1
