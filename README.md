@@ -8,5 +8,7 @@ The result is an app developed for Wear-OS.
 ## Packages
 
 This project requires the next packages from pub.dev:
-     flutter_intl version 0.0.1
-     intl version 0.18.1
+ Markup : * flutter_intl version 0.0.1
+          * intl version 0.18.1
+     
+    
